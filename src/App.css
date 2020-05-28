@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.bug {
+  background-color: #8f9e1e;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.electric {
+  background-color: #f6b915;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fire {
+  background-color: #ca2002;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.grass {
+  background-color: #538f31;
+}
+.normal {
+  background-color: #b1ac9c;
+}
+.rock {
+  background-color: #9f853e;
+}
+.dark {
+  background-color: #3b2d27;
+}
+.fairy {
+  background-color: #e48de1;
+}
+.flying {
+  background-color: #5b75d3;
+}
+.ground {
+  background-color: #c7a657;
+}
+.poison {
+  background-color: #7a3b7b;
+}
+.steel {
+  background-color: #908ea3;
+}
+.dragon {
+  background-color: #7c68dc;
+}
+.fighting {
+  background-color: #742d19;
+}
+.ghost {
+  background-color: #51539e;
+}
+.ice {
+  background-color: #7edcf6;
+}
+.psychic {
+  background-color: #da3167;
+}
+.water {
+  background-color: #3492ee;
+}
+.types-text {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 100;
+  margin: 0px 10px;
+  text-shadow: 1.3px 1.3px #333;
 }

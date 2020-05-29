@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.pokemoncard.scss';
 
 const PokemonCard = ({ pokemon }) => {
   const { id, name, types, sprites } = pokemon;

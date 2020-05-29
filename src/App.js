@@ -10,23 +10,8 @@ class App extends Component {
     };
   }
 
-  // componentWillMount() {
-  //   for (let i = 1; i < 152; i++) {
-  //     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-  //       .then((response) => response.json())
-  //       .then((pokemon) => {
-  //         this.setState({ pokemonData: [...this.state.pokemonData, pokemon] });
-  //       });
-  //   }
-  // }
-
   async componentWillMount() {
     for (let i = 1; i < 152; i++) {
-      // fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-      //   .then((response) => response.json())
-      //   .then((pokemon) => {
-      //     this.setState({ pokemonData: [...this.state.pokemonData, pokemon] });
-      //   });
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
       const pokemon = await response.json();
       this.setState({ pokemonData: [...this.state.pokemonData, pokemon] });

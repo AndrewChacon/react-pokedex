@@ -5,6 +5,8 @@ class PokemonView extends Component {
     super();
     this.state = {
       pokemonData: {},
+      pokemonImage: '',
+      pokemonTypes: [],
     };
   }
 
@@ -14,17 +16,25 @@ class PokemonView extends Component {
     );
     const pokemon = await response.json();
     this.setState({ pokemonData: pokemon });
-    console.log(this.state.pokemonData);
+    this.setState({ pokemonImage: pokemon.sprites.front_default });
+    this.setState({ pokemonTypes: pokemon.types });
+    console.log('sprites', this.state.pokemonData);
   }
 
   render() {
-    const { name, id, sprites } = this.state.pokemonData;
+    const { name, id, types } = this.state.pokemonData;
+    const { pokemonImage, pokemonTypes } = this.state;
     return (
       <div>
         <h1>Pokemon View</h1>
         <h1>{name}</h1>
-        {/* <img src={sprites.front_default} alt={name} /> */}
+        <img src={pokemonImage} alt={name} />
         <p>{`Entry #${id}`}</p>
+        {pokemonTypes.map((types) => (
+          <p key={types.type.name} className={`types-text ${types.type.name}`}>
+            {types.type.name.toUpperCase()}
+          </p>
+        ))}
       </div>
     );
   }

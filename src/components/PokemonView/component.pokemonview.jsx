@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TypeDisplay from '../TypeDisplay/component.typedisplay';
 
 class PokemonView extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class PokemonView extends Component {
   }
 
   render() {
-    const { name, id, types } = this.state.pokemonData;
+    const { name, id } = this.state.pokemonData;
     const { pokemonImage, pokemonTypes } = this.state;
     return (
       <div>
@@ -30,10 +31,8 @@ class PokemonView extends Component {
         <h1>{name}</h1>
         <img src={pokemonImage} alt={name} />
         <p>{`Entry #${id}`}</p>
-        {pokemonTypes.map((types) => (
-          <p key={types.type.name} className={`types-text ${types.type.name}`}>
-            {types.type.name.toUpperCase()}
-          </p>
+        {pokemonTypes.map((typeData) => (
+          <TypeDisplay key={typeData.type.name} typeData={typeData} />
         ))}
       </div>
     );
